@@ -44,10 +44,10 @@ export const SuperTokensConfig: TypeInput = {
                             clients: [{
                                 clientId: process.env.CLIENT_ID!,
                                 clientSecret: process.env.CLIENT_SECRET_VALUE!,
-                                scope: ["User.Read"]
+                                scope: ["openid", "email", "profile"]
                             }],
-                            authorizationEndpoint: `https://login.microsoft.com/${process.env.TENANT_ID}/oauth2/v2.0/authorize`,
-                            tokenEndpoint: `https://login.microsoft.com/${process.env.TENANT_ID}/oauth2/v2.0/token`,
+                            authorizationEndpoint: `https://login.microsoftonline.com/${process.env.TENANT_ID}/oauth2/v2.0/authorize`,
+                            tokenEndpoint: `https://login.microsoftonline.com/${process.env.TENANT_ID}/oauth2/v2.0/token`,
                             userInfoEndpoint: "https://graph.microsoft.com/v1.0/me",
                             userInfoMap: {
                                 fromUserInfoAPI: {
